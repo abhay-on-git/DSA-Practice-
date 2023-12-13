@@ -1,0 +1,12 @@
+Create Target Array in the Given Order
+class Solution {
+    public int[] createTargetArray(int[] nums, int[] index) {
+        ArrayList<Integer> dynamicArr = new ArrayList<>();
+        for(int i=0 ;i<nums.length;i++){
+           dynamicArr.add(index[i],nums[i]);
+        } 
+        int[] targate = dynamicArr.stream().mapToInt(Integer::intValue).toArray();
+
+        return targate;
+    }
+}
